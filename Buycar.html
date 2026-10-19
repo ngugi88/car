@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Car | Peach Cars - Certified Showroom & Auto Financing</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-menu-bar">
+        <div class="brand-title">
+            <img src="images/CAR._royal-removebg-preview.png" alt="CAR.png" width="100" height="60">
+            <span>Peach Cars</span>
+        </div>
+        
+        <ul class="nav-links">
+            <a href="car.html"><h2>Home</h2></a>
+            <a href="About.html"><h2>About Us</h2></a>
+            <a href="Buycar.html" class="active-nav"><h2>Buy Car</h2></a>
+            <a href="contactus.html"><h2>Contact Us</h2></a>
+        </ul>
+    </div>
+        <section class="section" id="inventorySection" style="padding-top: 20px;">
+            <div class="section-title-wrap">
+                <span class="section-badge">Verified Showroom Inventory</span>
+                <h2 class="section-title">Available Vehicles For Sale</h2>
+                <p class="section-subtitle">
+                    Select a category, filter by budget, or click any vehicle to view full mechanical inspection reports, calculate monthly loans, or schedule a priority test drive.
+                </p>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="category-filter-bar" id="categoryFilterBar">
+                <button class="filter-tab active" data-category="all">
+                    <i class="fa-solid fa-border-all"></i> All Cars (12)
+                </button>
+                <button class="filter-tab" data-category="suv">
+                    <i class="fa-solid fa-truck-monster"></i> SUVs & 4x4
+                </button>
+                <button class="filter-tab" data-category="sedan">
+                    <i class="fa-solid fa-car"></i> Sedans
+                </button>
+                <button class="filter-tab" data-category="sports">
+                    <i class="fa-solid fa-gauge-high"></i> Sports Cars
+                </button>
+                <button class="filter-tab" data-category="electric">
+                    <i class="fa-solid fa-bolt"></i> Electric (EV)
+                </button>
+                <button class="filter-tab" data-category="truck">
+                    <i class="fa-solid fa-truck-pickup"></i> Trucks
+                </button>
+                <button class="filter-tab" data-category="luxury">
+                    <i class="fa-solid fa-gem"></i> Luxury
+                </button>
+                <button class="filter-tab" data-category="hatchback">
+                    <i class="fa-solid fa-car-side"></i> Hatchbacks
+                </button>
+                <button class="filter-tab" data-category="convertible">
+                    <i class="fa-solid fa-wind"></i> Convertibles
+                </button>
+            </div>
+
+            <!-- Inventory Controls Bar -->
+            <div class="inventory-controls-bar">
+                <div class="inventory-meta">
+                    <i class="fa-solid fa-warehouse" style="color: var(--accent-gold);"></i>
+                    <span class="inventory-counter">Showing <strong id="visibleCarCount">12</strong> verified vehicles in stock</span>
+                </div>
+                <div class="inventory-sort-group">
+                    <label for="inventorySort"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort By:</label>
+                    <select id="inventorySort" class="sort-select" onchange="sortInventory()">
+                        <option value="featured">Featured / Recommended</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="year-desc">Year: Newest First</option>
+                        <option value="mileage-asc">Mileage: Lowest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Car Cards Grid -->
+            <div class="car-cards-grid" id="inventoryGrid">
+                
+                <!-- 1. Toyota Land Cruiser 300 VXR -->
+                <article class="car-box" data-category="suv" data-condition="certified" data-price="89500" data-year="2024" data-mileage="14200" data-name="Toyota Land Cruiser 300 VXR">
+                    <div class="car-box-image">
+                        <img src="images/toyota-land-cruiser-300-series--2022-635210.jpg" alt="Toyota Land Cruiser 300 VXR SUV">
+                        <span class="car-type-badge">SUV & 4x4</span>
+                        <span class="badge-condition">Certified Pre-Owned</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Toyota Land Cruiser 300 VXR</h3>
+                        <span class="car-box-tagline">2024 &bull; 3.5L Twin-Turbo V6 &bull; 409 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$89,500</span>
+                            <span class="monthly-price">Est. $1,120 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            Pinnacle of bulletproof reliability and off-road supremacy. Features Multi-Terrain Monitor, crawl control, cool box, and JBL synthesis surround sound.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">14,200 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">10-Spd Auto</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">7 Seater</span>
+                                <span class="spec-label">Capacity</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Toyota Land Cruiser 300 VXR', 89500)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Toyota Land Cruiser 300 VXR')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('land-cruiser-300')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (99/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Mercedes-Benz S-Class S580 -->
+                <article class="car-box" data-category="luxury" data-condition="new" data-price="128000" data-year="2024" data-mileage="1200" data-name="Mercedes-Benz S-Class S580">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Mercedes-Benz S580 Luxury Sedan">
+                        <span class="car-type-badge">Luxury & Executive</span>
+                        <span class="badge-condition badge-brand-new">Brand New</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Mercedes-Benz S580 4MATIC</h3>
+                        <span class="car-box-tagline">2024 &bull; 4.0L Bi-Turbo V8 EQ &bull; 496 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$128,000</span>
+                            <span class="monthly-price">Est. $1,610 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            Ultra-quiet flagship sedan offering executive first-class rear seats, 64-color active ambient lighting, Burmester 3D audio, and intelligent air suspension.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">1,200 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">9G-Tronic</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">AWD (4MATIC)</span>
+                                <span class="spec-label">Drivetrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Mercedes-Benz S580 4MATIC', 128000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Mercedes-Benz S580 4MATIC')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('mercedes-s580')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (100/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Porsche 911 Carrera S -->
+                <article class="car-box" data-category="sports" data-condition="certified" data-price="122000" data-year="2023" data-mileage="9800" data-name="Porsche 911 Carrera S">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Porsche 911 Carrera S Sports Car">
+                        <span class="car-type-badge">Sports Car</span>
+                        <span class="badge-condition">Certified Pre-Owned</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Porsche 911 Carrera S (992)</h3>
+                        <span class="car-box-tagline">2023 &bull; 3.0L Twin-Turbo Boxer 6 &bull; 443 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$122,000</span>
+                            <span class="monthly-price">Est. $1,530 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            Legendary German engineering delivering razor-sharp cornering, 0-60 in 3.3s with Sport Chrono, sports exhaust system, and PASM active dampers.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">9,800 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">8-Speed PDK</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">Rear-Wheel</span>
+                                <span class="spec-label">Drivetrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Porsche 911 Carrera S', 122000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Porsche 911 Carrera S')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('porsche-911')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (98/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Tesla Model S Plaid -->
+                <article class="car-box" data-category="electric" data-condition="certified" data-price="88000" data-year="2024" data-mileage="5200" data-name="Tesla Model S Plaid">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80" alt="Tesla Model S Plaid Electric Car">
+                        <span class="car-type-badge">Electric (EV)</span>
+                        <span class="badge-condition">Certified Pre-Owned</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Tesla Model S Plaid</h3>
+                        <span class="car-box-tagline">2024 &bull; Tri-Motor AWD &bull; 1,020 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$88,000</span>
+                            <span class="monthly-price">Est. $1,105 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            Unmatched electric hyper-acceleration (0-60 in 1.99s). Features 396-mile EPA range, full self-driving hardware, yoke steering, and ultra-fast charging.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">5,200 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">396 Miles</span>
+                                <span class="spec-label">EV Range</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">Tri-Motor AWD</span>
+                                <span class="spec-label">Powertrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Tesla Model S Plaid', 88000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Tesla Model S Plaid')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('tesla-model-s')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (99/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. BMW 530i M Sport -->
+                <article class="car-box" data-category="sedan" data-condition="new" data-price="58500" data-year="2024" data-mileage="850" data-name="BMW 530i M Sport">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="BMW 530i M Sport Sedan">
+                        <span class="car-type-badge">Sedan</span>
+                        <span class="badge-condition badge-brand-new">Brand New</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">BMW 530i M Sport (G60)</h3>
+                        <span class="car-box-tagline">2024 &bull; 2.0L TwinPower Turbo &bull; 255 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$58,500</span>
+                            <span class="monthly-price">Est. $735 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            The ultimate executive business sedan. Outfitted with M Sport aerodynamic package, BMW Curved Display with iDrive 8.5, and Harman Kardon sound.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">850 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">8-Spd Steptronic</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">35 MPG</span>
+                                <span class="spec-label">Fuel Econ</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('BMW 530i M Sport', 58500)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('BMW 530i M Sport')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('bmw-530i')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (100/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Ford F-150 Raptor -->
+                <article class="car-box" data-category="truck" data-condition="certified" data-price="79000" data-year="2023" data-mileage="18500" data-name="Ford F-150 Raptor">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=800&q=80" alt="Ford F-150 Raptor Off-Road Pickup">
+                        <span class="car-type-badge">Pickup Truck</span>
+                        <span class="badge-condition">Certified Pre-Owned</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Ford F-150 Raptor 4x4</h3>
+                        <span class="car-box-tagline">2023 &bull; 3.5L EcoBoost High-Output &bull; 450 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$79,000</span>
+                            <span class="monthly-price">Est. $990 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            High-speed desert racer and heavy-duty towing master. Equipped with FOX Live Valve electronic internal bypass shocks and 37-inch BFGoodrich tires.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">18,500 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">10-Spd Auto</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">8,200 Lbs</span>
+                                <span class="spec-label">Towing</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Ford F-150 Raptor 4x4', 79000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Ford F-150 Raptor 4x4')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('ford-raptor')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (97/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Toyota Land Cruiser Prado TX-L -->
+                <article class="car-box" data-category="suv" data-condition="certified" data-price="68000" data-year="2023" data-mileage="21000" data-name="Toyota Prado TX-L 2.8D">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Toyota Prado TX-L SUV">
+                        <span class="car-type-badge">SUV & 4x4</span>
+                        <span class="badge-condition">Certified Pre-Owned</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Toyota Prado TX-L 2.8D</h3>
+                        <span class="car-box-tagline">2023 &bull; 2.8L Turbo Diesel &bull; 201 HP &bull; 500 Nm</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$68,000</span>
+                            <span class="monthly-price">Est. $855 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            The go-to family expedition SUV for African and global terrain. Full-time 4WD, center differential lock, beige leather seating, and sunroof.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">21,000 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">6-Spd Auto</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">7 Seats</span>
+                                <span class="spec-label">Capacity</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Toyota Prado TX-L 2.8D', 68000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Toyota Prado TX-L 2.8D')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('toyota-prado')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (99/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. Audi RS e-tron GT -->
+                <article class="car-box" data-category="electric" data-condition="new" data-price="115000" data-year="2024" data-mileage="1500" data-name="Audi RS e-tron GT">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" alt="Audi RS e-tron GT Electric Supercar">
+                        <span class="car-type-badge">Electric (EV)</span>
+                        <span class="badge-condition badge-brand-new">Brand New</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Audi RS e-tron GT Quattro</h3>
+                        <span class="car-box-tagline">2024 &bull; Dual Permanent Synchronous Motors &bull; 637 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$115,000</span>
+                            <span class="monthly-price">Est. $1,440 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            Breathtaking grand tourer proportions with 800V fast-charge architecture (5% to 80% in 22 mins). 0-60 in 3.1s with boost mode engaged.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">1,500 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">280 Miles</span>
+                                <span class="spec-label">EV Range</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">Quattro AWD</span>
+                                <span class="spec-label">Drivetrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Audi RS e-tron GT Quattro', 115000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Audi RS e-tron GT Quattro')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('audi-etron-gt')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (100/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. Range Rover Autobiography -->
+                <article class="car-box" data-category="luxury" data-condition="new" data-price="165000" data-year="2024" data-mileage="900" data-name="Range Rover Autobiography">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Range Rover Autobiography Luxury SUV">
+                        <span class="car-type-badge">Luxury & Executive</span>
+                        <span class="badge-condition badge-brand-new">Brand New</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Range Rover Autobiography</h3>
+                        <span class="car-box-tagline">2024 &bull; 4.4L Twin-Turbo V8 &bull; 523 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$165,000</span>
+                            <span class="monthly-price">Est. $2,075 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            The pinnacle of luxury SUV engineering. Features four-wheel steering, executive semi-aniline massage leather, electronic air suspension, and whisper cabin.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">900 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">8-Spd ZF Auto</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">AWD + Steer</span>
+                                <span class="spec-label">Drivetrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Range Rover Autobiography', 165000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Range Rover Autobiography')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('range-rover')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (100/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 10. BMW M4 Competition -->
+                <article class="car-box" data-category="sports" data-condition="certified" data-price="84500" data-year="2023" data-mileage="12400" data-name="BMW M4 Competition">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="BMW M4 Competition Coupe">
+                        <span class="car-type-badge">Sports Car</span>
+                        <span class="badge-condition">Certified Pre-Owned</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">BMW M4 Competition Coupe</h3>
+                        <span class="car-box-tagline">2023 &bull; 3.0L M TwinPower Turbo &bull; 503 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$84,500</span>
+                            <span class="monthly-price">Est. $1,060 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            High-revving adrenaline machine. Features carbon fiber roof, M carbon bucket seats, M xDrive all-wheel drive with pure RWD drift mode switch.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">12,400 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">8-Spd M Auto</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">M xDrive</span>
+                                <span class="spec-label">Drivetrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('BMW M4 Competition Coupe', 84500)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('BMW M4 Competition Coupe')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('bmw-m4')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (98/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 11. Volkswagen Golf R -->
+                <article class="car-box" data-category="hatchback" data-condition="new" data-price="45000" data-year="2024" data-mileage="1100" data-name="Volkswagen Golf R">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80" alt="Volkswagen Golf R Hot Hatchback">
+                        <span class="car-type-badge">Hatchback</span>
+                        <span class="badge-condition badge-brand-new">Brand New</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Volkswagen Golf R 4MOTION</h3>
+                        <span class="car-box-tagline">2024 &bull; 2.0L TSI Turbocharged &bull; 315 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$45,000</span>
+                            <span class="monthly-price">Est. $565 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            The benchmark hot hatch. Features torque-vectoring rear differential with Drift Mode, digital cockpit pro, Nappa leather, and Akrapovic exhaust.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">1,100 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">7-Spd DSG</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">4MOTION AWD</span>
+                                <span class="spec-label">Drivetrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Volkswagen Golf R 4MOTION', 45000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Volkswagen Golf R 4MOTION')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('golf-r')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (100/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 12. Chevrolet Corvette Stingray Convertible -->
+                <article class="car-box" data-category="convertible" data-condition="certified" data-price="78000" data-year="2023" data-mileage="8200" data-name="Corvette Stingray Convertible">
+                    <div class="car-box-image">
+                        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" alt="Corvette Stingray Convertible">
+                        <span class="car-type-badge">Convertible</span>
+                        <span class="badge-condition">Certified Pre-Owned</span>
+                    </div>
+                    <div class="car-box-body">
+                        <h3 class="car-box-title">Corvette Stingray 3LT (C8)</h3>
+                        <span class="car-box-tagline">2023 &bull; 6.2L Mid-Engine LT2 V8 &bull; 495 HP</span>
+                        <div class="car-price-row">
+                            <span class="main-price">$78,000</span>
+                            <span class="monthly-price">Est. $980 / mo</span>
+                        </div>
+                        <p class="car-box-desc">
+                            American mid-engine exotic with automated power hardtop retracting in 16 seconds up to 30 mph. Z51 performance package and magnetic ride control.
+                        </p>
+                        <div class="car-spec-list">
+                            <div class="spec-item">
+                                <span class="spec-value">8,200 km</span>
+                                <span class="spec-label">Mileage</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">8-Spd Dual Clutch</span>
+                                <span class="spec-label">Gearbox</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-value">Mid-Engine RWD</span>
+                                <span class="spec-label">Drivetrain</span>
+                            </div>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn-buy-card" onclick="selectCarForPurchase('Corvette Stingray 3LT Convertible', 78000)">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy / Reserve
+                            </button>
+                            <button class="btn-test-drive" onclick="openTestDriveModal('Corvette Stingray 3LT Convertible')">
+                                <i class="fa-solid fa-calendar-check"></i> Test Drive
+                            </button>
+                            <button class="btn-view-specs" onclick="openCarSpecsModal('corvette-c8')">
+                                <i class="fa-solid fa-list-check"></i> Full Specs & Inspection Score (99/100)
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- How Buying Works Section -->
+        <section class="section" style="padding-top: 10px;">
+            <div class="section-title-wrap">
+                <span class="section-badge">Simple 4-Step Process</span>
+                <h2 class="section-title">How To Buy Your Car At Peach Cars</h2>
+                <p class="section-subtitle">
+                    We've eliminated dealership stress. Buy online or in our showroom in 4 straightforward steps.
+                </p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <i class="fa-solid fa-car-side step-icon"></i>
+                    <h4>Choose Your Car</h4>
+                    <p>Browse our verified inventory or tell us the exact spec you desire. Review full history and 150-point report.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <i class="fa-solid fa-road step-icon"></i>
+                    <h4>Free Test Drive</h4>
+                    <p>Book a private test drive at our flagship showroom or right at your home or office address.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <i class="fa-solid fa-file-invoice-dollar step-icon"></i>
+                    <h4>Flexible Payment</h4>
+                    <p>Pay cash/wire transfer, leverage top bank asset financing, or offset the cost by trading in your current car.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">4</span>
+                    <i class="fa-solid fa-key step-icon"></i>
+                    <h4>Drive or Delivery</h4>
+                    <p>Complete fast digital paperwork and receive your keys with logbook transfer and our 1-year warranty coverage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auto Loan & Monthly Payment Calculator -->
+        <section class="section loan-calc-section" id="calculatorSection">
+            <div class="section-title-wrap">
+                <span class="section-badge">Financial Planning</span>
+                <h2 class="section-title">Auto Loan & Payment Calculator</h2>
+                <p class="section-subtitle">
+                    Estimate your monthly payments in seconds. Adjust down payment, interest rate, and repayment duration to match your lifestyle budget.
+                </p>
+            </div>
+
+            <div class="calc-grid">
+                <!-- Calculator Controls -->
+                <div class="calc-card-panel">
+                    <!-- Vehicle Price -->
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <span>Vehicle Purchase Price</span>
+                            <span class="calc-value-badge" id="calcPriceDisplay">$89,500</span>
+                        </div>
+                        <input type="range" class="calc-slider" id="calcPriceSlider" min="15000" max="220000" step="1000" value="89500" oninput="updateLoanCalculator()">
+                    </div>
+
+                    <!-- Down Payment -->
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <span>Down Payment (<span id="calcDownPercent">20%</span>)</span>
+                            <span class="calc-value-badge" id="calcDownDisplay">$17,900</span>
+                        </div>
+                        <input type="range" class="calc-slider" id="calcDownSlider" min="0" max="100000" step="500" value="17900" oninput="updateLoanCalculator()">
+                    </div>
+
+                    <!-- Loan Term -->
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <span>Financing Term</span>
+                            <span class="calc-value-badge" id="calcTermDisplay">60 Months (5 Yrs)</span>
+                        </div>
+                        <div class="term-buttons-row">
+                            <button type="button" class="term-btn" data-months="24" onclick="setLoanTerm(24, this)">24 Mo</button>
+                            <button type="button" class="term-btn" data-months="36" onclick="setLoanTerm(36, this)">36 Mo</button>
+                            <button type="button" class="term-btn" data-months="48" onclick="setLoanTerm(48, this)">48 Mo</button>
+                            <button type="button" class="term-btn active" data-months="60" onclick="setLoanTerm(60, this)">60 Mo</button>
+                            <button type="button" class="term-btn" data-months="72" onclick="setLoanTerm(72, this)">72 Mo</button>
+                        </div>
+                    </div>
+
+                    <!-- Interest Rate -->
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <span>Estimated Interest Rate (APR)</span>
+                            <span class="calc-value-badge" id="calcRateDisplay">7.5%</span>
+                        </div>
+                        <input type="range" class="calc-slider" id="calcRateSlider" min="3.0" max="16.0" step="0.25" value="7.5" oninput="updateLoanCalculator()">
+                    </div>
+                </div>
+
+                <!-- Calculator Output Summary -->
+                <div class="calc-result-panel">
+                    <div class="calc-result-header">
+                        <span>Estimated Monthly Installment</span>
+                        <div class="calc-big-payment" id="calcMonthlyOutput">$1,434 <span>/ mo</span></div>
+                        <p style="font-size: 13px; color: var(--text-dim); margin-top: 4px;">Excludes local registration and insurance fees</p>
+                    </div>
+
+                    <div class="calc-breakdown-list">
+                        <div class="breakdown-row">
+                            <span class="lbl">Principal Loan Amount:</span>
+                            <span class="val" id="calcPrincipalOutput">$71,600</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="lbl">Total Interest Payable:</span>
+                            <span class="val" id="calcInterestOutput">$14,440</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="lbl">Total Loan Cost:</span>
+                            <span class="val" id="calcTotalOutput">$86,040</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="applyFinancingToForm()">
+                        <i class="fa-solid fa-stamp"></i> Apply For Financing Pre-Approval
+                    </button>
+                </div>
+            </div>
+
+            <!-- Trade-In Estimator Box -->
+            <div class="tradein-box">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                    <i class="fa-solid fa-arrows-rotate" style="font-size: 24px; color: var(--accent-gold);"></i>
+                    <h3 style="color: #ffffff; font-size: 1.3rem;">Have a Car to Trade In?</h3>
+                </div>
+                <p style="color: var(--text-muted); font-size: 14px;">
+                    Exchange your current vehicle to reduce your down payment or monthly financing bill. Get an instant valuation estimate below.
+                </p>
+
+                <div class="tradein-grid">
+                    <div class="search-field">
+                        <label for="tradeMake">Make & Model</label>
+                        <input type="text" id="tradeMake" placeholder="e.g. Toyota Prado, Mazda CX-5">
+                    </div>
+                    <div class="search-field">
+                        <label for="tradeYear">Year</label>
+                        <select id="tradeYear">
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016 or older</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label for="tradeMileage">Mileage (km)</label>
+                        <input type="number" id="tradeMileage" placeholder="e.g. 45000">
+                    </div>
+                    <div class="search-field">
+                        <label for="tradeCondition">Condition</label>
+                        <select id="tradeCondition">
+                            <option value="excellent">Excellent (Like New)</option>
+                            <option value="good" selected>Good (Minor wear)</option>
+                            <option value="fair">Fair (Needs service)</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn-secondary" style="height: 44px; margin-top: 19px; white-space: nowrap;" onclick="calculateTradeInValue()">
+                        <i class="fa-solid fa-calculator"></i> Value My Car
+                    </button>
+                </div>
+
+                <div class="tradein-result" id="tradeInResult">
+                    <div>
+                        <strong style="color: #ffffff; font-size: 15px;">Estimated Trade-In Equity: </strong>
+                        <span id="tradeValueSpan" style="color: var(--accent-gold); font-size: 1.3rem; font-weight: 800; margin-left: 8px;">$24,000 - $28,500</span>
+                    </div>
+                    <button class="btn-card-inquire" style="width: auto; padding: 8px 18px;" onclick="applyTradeInToPurchase()">
+                        Apply to Purchase Order &rarr;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purchase & Reservation Order Form -->
+        <section class="section" id="buyFormSection">
+            <div class="section-title-wrap">
+                <span class="section-badge">Reserve or Inquire</span>
+                <h2 class="section-title">Order & Reserve Vehicle Online</h2>
+                <p class="section-subtitle">
+                    Lock in your vehicle reservation with zero obligation. Our showroom sales director will reach out within 30 minutes with official paperwork and scheduling.
+                </p>
+            </div>
+
+            <div class="buy-form-wrapper">
+                <form id="purchaseOrderForm" onsubmit="handlePurchaseSubmit(event)">
+                    <div class="order-form-grid">
+                        
+                        <!-- Selected Vehicle -->
+                        <div class="form-group full-col">
+                            <label class="form-label" for="selectedVehicle">
+                                <i class="fa-solid fa-car" style="color: var(--accent-gold); margin-right: 6px;"></i> Selected Vehicle of Interest
+                            </label>
+                            <select id="selectedVehicle" class="form-select" required onchange="handleCarSelectChange()">
+                                <option value="Toyota Land Cruiser 300 VXR" data-price="89500">Toyota Land Cruiser 300 VXR ($89,500 - SUV & 4x4)</option>
+                                <option value="Mercedes-Benz S580 4MATIC" data-price="128000">Mercedes-Benz S580 4MATIC ($128,000 - Luxury Sedan)</option>
+                                <option value="Porsche 911 Carrera S" data-price="122000">Porsche 911 Carrera S ($122,000 - Sports Car)</option>
+                                <option value="Tesla Model S Plaid" data-price="88000">Tesla Model S Plaid ($88,000 - Electric EV)</option>
+                                <option value="BMW 530i M Sport" data-price="58500">BMW 530i M Sport ($58,500 - Executive Sedan)</option>
+                                <option value="Ford F-150 Raptor 4x4" data-price="79000">Ford F-150 Raptor 4x4 ($79,000 - Pickup Truck)</option>
+                                <option value="Toyota Prado TX-L 2.8D" data-price="68000">Toyota Prado TX-L 2.8D ($68,000 - SUV & 4x4)</option>
+                                <option value="Audi RS e-tron GT Quattro" data-price="115000">Audi RS e-tron GT Quattro ($115,000 - EV Supercar)</option>
+                                <option value="Range Rover Autobiography" data-price="165000">Range Rover Autobiography ($165,000 - Ultra Luxury)</option>
+                                <option value="BMW M4 Competition Coupe" data-price="84500">BMW M4 Competition Coupe ($84,500 - Sports Coupe)</option>
+                                <option value="Volkswagen Golf R 4MOTION" data-price="45000">Volkswagen Golf R 4MOTION ($45,000 - Performance Hatch)</option>
+                                <option value="Corvette Stingray 3LT Convertible" data-price="78000">Corvette Stingray 3LT Convertible ($78,000 - Convertible)</option>
+                            </select>
+                        </div>
+
+                        <!-- Payment Preference -->
+                        <div class="form-group full-col">
+                            <label class="form-label">Payment & Purchase Method</label>
+                            <div class="payment-method-selector">
+                                <label class="payment-method-card active" onclick="selectPaymentMethod('cash', this)">
+                                    <input type="radio" name="paymentMethod" value="Cash / Full Wire" checked>
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                    <span>Cash / Full Payment</span>
+                                </label>
+                                <label class="payment-method-card" onclick="selectPaymentMethod('finance', this)">
+                                    <input type="radio" name="paymentMethod" value="Bank Asset Financing">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    <span>Bank Financing / Installments</span>
+                                </label>
+                                <label class="payment-method-card" onclick="selectPaymentMethod('tradein', this)">
+                                    <input type="radio" name="paymentMethod" value="Trade-In + Balance">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                    <span>Trade-In + Balance</span>
+                                </label>
+                            </div>
+                        </div>
+
+                      
+          
+                        </div>
+
+                        <!-- Budget or Down Payment -->
+                        <div class="form-group">
+                            <label class="form-label" for="targetBudget">Target Down Payment or Budget ($)</label>
+                            <input type="text" id="targetBudget" class="form-input" placeholder="e.g. $20,000 or Full Amount">
+                        </div>
+
+                        <!-- Preferred Timeline -->
+                        <div class="form-group">
+                            <label class="form-label" for="purchaseTimeline">Purchase Timeline</label>
+                            <select id="purchaseTimeline" class="form-select">
+                                <option value="Immediate">Immediate (Within 48 hours)</option>
+                                <option value="This Week">This Week</option>
+                                <option value="This Month">Within 30 Days</option>
+                                <option value="Browsing">Researching for upcoming purchase</option>
+                            </select>
+                        </div>
+
+                        <!-- Comments -->
+                        <div class="form-group full-col">
+                            <label class="form-label" for="buyerComments">Special Instructions or Trade-In Notes</label>
+                            <textarea id="buyerComments" class="form-textarea" rows="3" placeholder="Tell us about tinting, registration preferences, custom plates, or trade-in car details..."></textarea>
+                        </div>
+
+                        <div class="full-col" style="margin-top: 10px;">
+                            <button type="submit" class="btn-submit" style="font-size: 16px; padding: 16px;">
+                                <i class="fa-solid fa-shield-check"></i> Submit Order Reservation & Inquire
+                            </button>
+                            <p style="text-align: center; color: var(--text-dim); font-size: 12px; margin-top: 12px;">
+                                <i class="fa-solid fa-lock"></i> Your data is 100% confidential. No hidden fees or automated sales calls.
+                            </p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Customer Testimonials Section -->
+        <section class="section" style="padding-top: 20px;">
+            <div class="section-title-wrap">
+                <span class="section-badge">Verified Buyer Stories</span>
+                <h2 class="section-title">What Our Drivers Say</h2>
+                <p class="section-subtitle">
+                    Over 1,200 vehicles successfully sold and delivered across the region.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Purchased the Land Cruiser 300 through Peach Cars. The 150-point inspection paperwork was completely transparent, and they delivered it right to my home in Kiambu within 24 hours of approval. Exceptional white-glove service!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div class="author-details">
+                            <h5>David Kariuki</h5>
+                            <span>Bought: Toyota Land Cruiser 300 VXR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The auto financing calculator on this site was accurate to the cent. Their finance manager helped me secure a 7.5% bank rate for my Mercedes S-Class without the painful paperwork. Highly recommend them."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-details">
+                            <h5>Amina Mohamed</h5>
+                            <span>Bought: Mercedes-Benz S580</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "I traded in my 2018 Prado for a new Ford Raptor. They gave me a fair valuation above market average and handled all logbook transfer formalities smoothly. Best car buying experience I've had."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-details">
+                            <h5>James Mwangi</h5>
+                            <span>Bought: Ford F-150 Raptor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal: Vehicle Full Specs & Inspection Score -->
+    <div class="modal-overlay" id="specModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header-img">
+                <img id="specModalImg" src="images/toyota-land-cruiser-300-series--2022-635210.jpg" alt="Vehicle Spec Preview">
+                <button class="modal-close-btn" onclick="closeModal('specModal')" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-content-area">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <h3 id="specModalTitle" style="color: #ffffff; font-size: 1.4rem; margin: 0;">Vehicle Specifications</h3>
+                    <span id="specModalScore" style="background: rgba(46, 204, 113, 0.2); border: 1px solid #2ecc71; color: #2ecc71; padding: 4px 10px; border-radius: 9999px; font-weight: 700; font-size: 12px;">
+                        Inspection: 99/100
+                    </span>
+                </div>
+                <p id="specModalDesc" style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 16px;">
+                    Comprehensive mechanical diagnostics verified by master technicians.
+                </p>
+
+                <table class="modal-specs-table" id="specModalTable">
+                    <!-- Dynamic Rows Populated by JS -->
+                </table>
+
+                <h4 style="color: #ffffff; font-size: 13px; text-transform: uppercase; margin: 16px 0 8px;">Key Standard Equipment</h4>
+                <ul class="modal-list" id="specModalFeatures">
+                    <!-- Populated by JS -->
+                </ul>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                    <button class="btn-primary" id="specModalBuyBtn" style="flex: 1; justify-content: center;">
+                        <i class="fa-solid fa-cart-shopping"></i> Proceed To Buy This Car
+                    </button>
+                    <button class="btn-secondary" onclick="closeModal('specModal')">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Schedule Test Drive -->
+    <div class="modal-overlay" id="testDriveModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-content-area" style="padding: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h3 style="color: #ffffff; margin: 0; font-size: 1.3rem;">
+                        <i class="fa-solid fa-key" style="color: var(--accent-gold);"></i> Book A Test Drive
+                    </h3>
+                    <button class="modal-close-btn" style="position: static;" onclick="closeModal('testDriveModal')" aria-label="Close modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 20px;">
+                    Get behind the wheel. Experience the power, acceleration, and luxury in person.
+                </p>
+
+                <form id="testDriveForm" onsubmit="handleTestDriveSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="tdCar">Vehicle to Test Drive</label>
+                        <input type="text" id="tdCar" class="form-input" readonly style="background: #12141a; font-weight: 700; color: var(--accent-gold);">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="tdName">Your Full Name</label>
+                        <input type="text" id="tdName" class="form-input" placeholder="e.g. Fiona Njoki" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="tdPhone">Phone / WhatsApp</label>
+                        <input type="tel" id="tdPhone" class="form-input" placeholder="+254 715 38 1111" required>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-group">
+                            <label class="form-label" for="tdDate">Preferred Date</label>
+                            <input type="date" id="tdDate" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="tdTime">Preferred Time</label>
+                            <select id="tdTime" class="form-select">
+                                <option value="10:00 AM">10:00 AM - Morning</option>
+                                <option value="01:00 PM">01:00 PM - Afternoon</option>
+                                <option value="04:00 PM">04:00 PM - Evening</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="tdLocation">Test Drive Location</label>
+                        <select id="tdLocation" class="form-select">
+                            <option value="Main Showroom">Peach Cars Showroom (Off Kiambu Rd)</option>
+                            <option value="At Home">At My Home / Office Address</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit" style="width: 100%; justify-content: center; margin-top: 10px;">
+                        <i class="fa-solid fa-calendar-check"></i> Confirm Test Drive Booking
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Purchase Order Confirmation Receipt -->
+    <div class="modal-overlay" id="orderConfirmModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-content-area" style="padding: 36px; text-align: center;">
+                <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(46, 204, 113, 0.2); border: 2px solid #2ecc71; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: #2ecc71; font-size: 28px;">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 8px;">Order Reservation Received!</h3>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px;">
+                    Thank you! Your vehicle has been reserved temporarily. Our showroom concierge is preparing the inspection dossier and contract.
+                </p>
+
+                <div style="background: #12141a; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 20px; text-align: left; margin-bottom: 24px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span style="color: var(--text-dim); font-size: 13px;">Reference Code:</span>
+                        <strong style="color: var(--accent-gold); font-family: 'Space Grotesk', sans-serif;" id="confRefCode">PC-2026-8941</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span style="color: var(--text-dim); font-size: 13px;">Vehicle:</span>
+                        <strong style="color: #ffffff;" id="confVehicle">Toyota Land Cruiser 300 VXR</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span style="color: var(--text-dim); font-size: 13px;">Customer:</span>
+                        <strong style="color: #ffffff;" id="confName">Fiona Njoki</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span style="color: var(--text-dim); font-size: 13px;">Payment Option:</span>
+                        <strong style="color: #ffffff;" id="confMethod">Cash / Full Wire</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: var(--text-dim); font-size: 13px;">Direct Showroom Line:</span>
+                        <strong style="color: var(--accent-gold);">+254 715 38 1111</strong>
+                    </div>
+                </div>
+
+                <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="closeModal('orderConfirmModal')">
+                    Back to Inventory
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div class="toast-notice" id="toastNotice">
+        <i class="fa-solid fa-circle-check" style="font-size: 18px;"></i>
+        <span id="toastMsg">Action completed successfully!</span>
+    </div>
+
+    
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <h3>Peach Cars</h3>
+                <p>
+                    Your trusted digital automotive marketplace for certified
+                    pre-owned and brand new premium vehicles. 150-point inspection,
+                    clear titles, and seamless asset financing.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="car.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Buycar.html">Buy Car Inventory</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Vehicle Categories</h4>
+                <ul>
+                    <li><a href="Buycar.html">SUVs &amp; 4x4</a></li>
+                    <li><a href="Buycar.html">Sedans</a></li>
+                    <li><a href="Buycar.html">Sports Cars</a></li>
+                    <li><a href="Buycar.html">Electric (EV)</a></li>
+                    <li><a href="Buycar.html">Luxury &amp; Executive</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Flagship Showroom</h4>
+                <p class="showroom-address">
+                    Off Kiambu Road, Northern Bypass (next to Shell Windsor).
+                    Open Monday to Saturday.
+                </p>
+
+                <span class="footer-phone">
+                    <i class="fa-solid fa-phone"></i> +254 715 38 1111
+                </span>
+
+                <span class="footer-email">
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@peach-technology.com
+                </span>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Peach Cars &amp; AutoSphere Inc. All rights reserved.</p>
+            <p>Engineered for Car Enthusiasts &amp; Smart Buyers.</p>
+        </div>
+
+    </div>
+</footer>
+
+    <!-- Interactive JavaScript Engine -->
+    <script>
+        // Vehicle Specifications Database
+        const vehicleSpecsDB = {
+            'land-cruiser-300': {
+                title: 'Toyota Land Cruiser 300 VXR',
+                score: '99/100',
+                image: 'images/toyota-land-cruiser-300-series--2022-635210.jpg',
+                price: 89500,
+                desc: 'The pinnacle of rugged overland dominance. Fully verified mechanical health, clean chassis, zero accident history.',
+                specs: [
+                    { label: 'Engine', val: '3.5-Liter Twin-Turbo V6 (V35A-FTS)' },
+                    { label: 'Horsepower', val: '409 HP @ 5,200 RPM' },
+                    { label: 'Torque', val: '650 Nm @ 2,000-3,600 RPM' },
+                    { label: 'Transmission', val: 'Direct Shift 10-Speed Automatic' },
+                    { label: 'Drivetrain', val: 'Full-time 4WD with Multi-Terrain Select' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 6.7 seconds' },
+                    { label: 'Fuel Capacity', val: '110 Liters (Main + Sub Tank)' }
+                ],
+                features: [
+                    'Multi-Terrain 360-degree camera with underfloor view',
+                    'Cool box refrigerator console in central armrest',
+                    '14-speaker JBL Premium Synthesis audio system',
+                    'Adaptive Variable Suspension (AVS) with crawl control',
+                    'Electric folding 3rd row seating with tri-zone climate control'
+                ]
+            },
+            'mercedes-s580': {
+                title: 'Mercedes-Benz S-Class S580 4MATIC',
+                score: '100/100',
+                image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80',
+                price: 128000,
+                desc: 'The undisputed benchmark of flagship automotive luxury. Brand new factory import with 3-year warranty.',
+                specs: [
+                    { label: 'Engine', val: '4.0L Bi-Turbo V8 with 48V EQ Boost' },
+                    { label: 'Horsepower', val: '496 HP + 21 HP EQ Boost' },
+                    { label: 'Torque', val: '700 Nm @ 2,000-4,500 RPM' },
+                    { label: 'Transmission', val: '9G-TRONIC 9-Speed Automatic' },
+                    { label: 'Drivetrain', val: '4MATIC All-Wheel Drive' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 4.4 seconds' },
+                    { label: 'Suspension', val: 'AIRMATIC Air Suspension with E-ACTIVE Body' }
+                ],
+                features: [
+                    'Executive Rear Seating Package with calf rest & hot-stone massage',
+                    'Burmester 3D High-End Surround Sound with in-seat exciters',
+                    'Augmented Reality Head-Up Display (AR-HUD)',
+                    'Digital Light projector headlamps with 1.3 million pixels per lamp',
+                    'MBUX Interior Assistant with gesture controls'
+                ]
+            },
+            'porsche-911': {
+                title: 'Porsche 911 Carrera S (992)',
+                score: '98/100',
+                image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80',
+                price: 122000,
+                desc: 'Iconic rear-engine dynamics with unmatched daily usability. Maintained exclusively by certified Porsche technicians.',
+                specs: [
+                    { label: 'Engine', val: '3.0L Twin-Turbocharged Flat-6' },
+                    { label: 'Horsepower', val: '443 HP @ 6,500 RPM' },
+                    { label: 'Torque', val: '530 Nm @ 2,300-5,000 RPM' },
+                    { label: 'Transmission', val: '8-Speed Porsche Doppelkupplung (PDK)' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 3.3s (Sport Chrono)' },
+                    { label: 'Top Speed', val: '308 km/h (191 mph)' }
+                ],
+                features: [
+                    'Sport Chrono Package with mode switch on steering',
+                    'Porsche Active Suspension Management (PASM) with 10mm lowering',
+                    'Sport exhaust system with twin oval black tailpipes',
+                    'Porsche Torque Vectoring Plus (PTV Plus) with e-rear differential',
+                    'Bose Surround Sound System with 12 speakers'
+                ]
+            },
+            'tesla-model-s': {
+                title: 'Tesla Model S Plaid',
+                score: '99/100',
+                image: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80',
+                price: 88000,
+                desc: 'Fastest accelerating production sedan on earth. Battery health tested at 98.6% capacity with lifetime supercharger ready.',
+                specs: [
+                    { label: 'Powertrain', val: 'Tri-Motor All-Wheel Drive with Carbon Sleeves' },
+                    { label: 'Horsepower', val: '1,020 Peak Horsepower' },
+                    { label: 'Range', val: '396 Miles (EPA Estimated)' },
+                    { label: 'Acceleration', val: '0 - 60 mph in 1.99s (1/4 mile in 9.23s)' },
+                    { label: 'Charging', val: 'Up to 250 kW Supercharging (200 mi in 15m)' }
+                ],
+                features: [
+                    'Full Self-Driving (FSD) Hardware 4.0 Suite included',
+                    '17-inch cinematic display with 10 teraflops gaming computer',
+                    'Active noise-canceling cabin acoustics',
+                    'Tri-zone temperature controls with HEPA bio-weapon defense filter',
+                    'Yoke steering with capacitive turn signal controls'
+                ]
+            },
+            'bmw-530i': {
+                title: 'BMW 530i M Sport',
+                score: '100/100',
+                image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80',
+                price: 58500,
+                desc: 'Refined athleticism. Perfect daily business commuter with exceptional highway fuel efficiency and modern design.',
+                specs: [
+                    { label: 'Engine', val: '2.0L BMW TwinPower Turbo 4-Cylinder' },
+                    { label: 'Horsepower', val: '255 HP @ 5,000 RPM' },
+                    { label: 'Torque', val: '400 Nm @ 1,600 RPM' },
+                    { label: 'Transmission', val: '8-Speed Steptronic Sport with Paddle Shifters' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 5.9 seconds' }
+                ],
+                features: [
+                    'M Sport Package with aerodynamic body kit & 20-inch wheels',
+                    'BMW Curved Display (12.3" instrument cluster + 14.9" infotainment)',
+                    'BMW Interaction Bar with backlit crystalline surfaces',
+                    'Harman Kardon Premium Sound System',
+                    'Parking Assistant Plus with surround 3D cameras'
+                ]
+            },
+            'ford-raptor': {
+                title: 'Ford F-150 Raptor 4x4',
+                score: '97/100',
+                image: 'https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=800&q=80',
+                price: 79000,
+                desc: 'Built tough for conquering extreme off-road terrain without sacrificing highway comfort and tech.',
+                specs: [
+                    { label: 'Engine', val: '3.5L High-Output EcoBoost Twin-Turbo V6' },
+                    { label: 'Horsepower', val: '450 HP @ 5,850 RPM' },
+                    { label: 'Torque', val: '691 Nm @ 3,000 RPM' },
+                    { label: 'Transmission', val: '10-Speed SelectShift Automatic' },
+                    { label: 'Suspension', val: 'FOX Live Valve 3.1 Internal Bypass Shocks' }
+                ],
+                features: [
+                    'Terrain Management System with 7 Drive Modes (inc. Baja Mode)',
+                    'Trail 1-Pedal Drive & Trail Turn Assist',
+                    'Bang & Olufsen Unleashed 18-speaker audio system',
+                    'Pro Power Onboard with 2.0 kW in-bed generator outlets',
+                    '37-inch All-Terrain KO2 tires with beadlock-capable wheels'
+                ]
+            },
+            'toyota-prado': {
+                title: 'Toyota Land Cruiser Prado TX-L 2.8D',
+                score: '99/100',
+                image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80',
+                price: 68000,
+                desc: 'Heavy-duty 4WD station wagon engineered to thrive on demanding road networks while carrying 7 passengers in luxury.',
+                specs: [
+                    { label: 'Engine', val: '2.8L 1GD-FTV DOHC 16-Valve Turbo Diesel' },
+                    { label: 'Horsepower', val: '201 HP @ 3,400 RPM' },
+                    { label: 'Torque', val: '500 Nm @ 1,600-2,800 RPM' },
+                    { label: 'Drivetrain', val: 'Full-time 4WD with Torsen Limited-Slip Center Diff' },
+                    { label: 'Towing Capacity', val: '3,000 kg Braked Towing' }
+                ],
+                features: [
+                    '7-seat configuration with power fold-flat rear seats',
+                    'Sunroof and dual-zone front/rear independent air conditioning',
+                    'Downhill Assist Control (DAC) & Hill-Start Assist Control (HAC)',
+                    'Cool box refrigerator console',
+                    'Toyota Safety Sense with pre-collision detection & lane trace'
+                ]
+            },
+            'audi-etron-gt': {
+                title: 'Audi RS e-tron GT Quattro',
+                score: '100/100',
+                image: 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80',
+                price: 115000,
+                desc: 'A sculptured piece of aerodynamic art powered by twin high-output synchronous electric motors.',
+                specs: [
+                    { label: 'Powertrain', val: 'Dual Electric Motors with Quattro AWD' },
+                    { label: 'Horsepower', val: '637 HP (Boost Mode) / 590 HP Continuous' },
+                    { label: 'Torque', val: '830 Nm Instant Torque' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 3.1 seconds' },
+                    { label: 'Charging', val: '800-Volt Architecture, 270 kW Ultra-Fast Charge' }
+                ],
+                features: [
+                    'Tungsten Carbide-coated brakes with 10-piston front calipers',
+                    'Bang & Olufsen 3D Sound System with 16 speakers',
+                    'Carbon fiber roof and rear aerodynamic diffuser',
+                    'Matrix LED headlights with Audi laser light technology',
+                    'Adaptive 3-chamber air suspension'
+                ]
+            },
+            'range-rover': {
+                title: 'Range Rover Autobiography',
+                score: '100/100',
+                image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80',
+                price: 165000,
+                desc: 'Peerless refinement. The royal standard of luxury off-road motoring with unmatched prestige.',
+                specs: [
+                    { label: 'Engine', val: '4.4L Twin-Turbo V8 (P530)' },
+                    { label: 'Horsepower', val: '523 HP @ 5,500 RPM' },
+                    { label: 'Torque', val: '750 Nm @ 1,800-4,600 RPM' },
+                    { label: 'Steering', val: 'All-Wheel Steering (7.3° rear wheel angle)' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 4.6 seconds' }
+                ],
+                features: [
+                    'Executive Class Comfort-Plus rear seating with footrests & screens',
+                    'Meridian Signature Sound System with active headrest noise cancellation',
+                    'Cabin Air Purification Pro with PM2.5 filtration',
+                    'Electronic Air Suspension with Dynamic Response Pro',
+                    'Soft door close & deployable side steps'
+                ]
+            },
+            'bmw-m4': {
+                title: 'BMW M4 Competition Coupe',
+                score: '98/100',
+                image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80',
+                price: 84500,
+                desc: 'Track-bred weapon engineered by BMW M GmbH. Includes M Carbon package and M Drive Professional software.',
+                specs: [
+                    { label: 'Engine', val: '3.0L S58 M TwinPower Turbo Inline-6' },
+                    { label: 'Horsepower', val: '503 HP @ 6,250 RPM' },
+                    { label: 'Torque', val: '650 Nm @ 2,750-5,500 RPM' },
+                    { label: 'Transmission', val: '8-Speed M Steptronic with Drivelogic' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 3.5 seconds' }
+                ],
+                features: [
+                    'M xDrive with selectable 4WD, 4WD Sport, and pure 2WD rear drift mode',
+                    'M Carbon bucket seats with illuminated M4 logo',
+                    'M Drive Professional with 10-stage M Traction Control',
+                    'M Compound brakes with red high-gloss calipers',
+                    'Head-Up Display with dedicated M View shift lights'
+                ]
+            },
+            'golf-r': {
+                title: 'Volkswagen Golf R 4MOTION',
+                score: '100/100',
+                image: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80',
+                price: 45000,
+                desc: 'All-weather speed and hatchback versatility. Brand new condition with factory launch control.',
+                specs: [
+                    { label: 'Engine', val: '2.0L EA888 evo4 TSI Turbocharged' },
+                    { label: 'Horsepower', val: '315 HP @ 5,600 RPM' },
+                    { label: 'Torque', val: '420 Nm @ 2,000-5,500 RPM' },
+                    { label: 'Transmission', val: '7-Speed Dual-Clutch DSG' },
+                    { label: 'Acceleration', val: '0 - 100 km/h in 4.7 seconds' }
+                ],
+                features: [
+                    'R-Performance Torque Vectoring rear axle',
+                    'Special Nürburgring & Drift driving modes',
+                    'Discover Pro 10-inch navigation and Digital Cockpit Pro',
+                    'Heated and ventilated front sports seats with Nappa leather',
+                    'Dynamic Chassis Control (DCC) with 15 damper settings'
+                ]
+            },
+            'corvette-c8': {
+                title: 'Corvette Stingray 3LT Convertible',
+                score: '99/100',
+                image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80',
+                price: 78000,
+                desc: 'Naturally aspirated V8 roaring right behind your head. Retractable hardtop can open in 16 seconds on the move.',
+                specs: [
+                    { label: 'Engine', val: '6.2L Small Block LT2 Naturally Aspirated V8' },
+                    { label: 'Horsepower', val: '495 HP @ 6,450 RPM (w/ Performance Exhaust)' },
+                    { label: 'Torque', val: '637 Nm @ 5,150 RPM' },
+                    { label: 'Transmission', val: '8-Speed Dual Clutch (Tremec)' },
+                    { label: 'Acceleration', val: '0 - 60 mph in 2.9 seconds' }
+                ],
+                features: [
+                    'Z51 Performance Package with larger Brembo brakes & e-LSD',
+                    'Magnetic Selective Ride Control 4.0',
+                    'Bose Performance Series 14-speaker sound system',
+                    'Front lift adjustable height with GPS memory memory',
+                    'GT2 competition sport bucket seats with custom leather stitch'
+                ]
+            }
+        };
+
+        let currentActiveCategory = 'all';
+        let currentLoanTermMonths = 60;
+
+        // Initialize Filter Tabs
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('#categoryFilterBar .filter-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    currentActiveCategory = tab.getAttribute('data-category');
+                    filterInventory();
+                });
+            });
+
+            // Set default date for test drive (tomorrow)
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const dateInput = document.getElementById('tdDate');
+            if (dateInput) {
+                dateInput.value = tomorrow.toISOString().split('T')[0];
+                dateInput.min = new Date().toISOString().split('T')[0];
+            }
+
+            // Run initial loan calculation
+            updateLoanCalculator();
+        });
+
+        // Filter Inventory Cards
+        function filterInventory(keyword = '', maxBudget = 'all', condition = 'all') {
+            const cards = document.querySelectorAll('#inventoryGrid .car-box');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                const cardName = card.getAttribute('data-name').toLowerCase();
+                const cardPrice = parseFloat(card.getAttribute('data-price'));
+                const cardCondition = card.getAttribute('data-condition');
+
+                let matchCategory = (currentActiveCategory === 'all') || (cardCat === currentActiveCategory);
+                let matchKeyword = !keyword || cardName.includes(keyword.toLowerCase());
+                let matchBudget = (maxBudget === 'all') || (cardPrice <= parseFloat(maxBudget));
+                let matchCondition = (condition === 'all') || (cardCondition === condition);
+
+                if (matchCategory && matchKeyword && matchBudget && matchCondition) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const counterEl = document.getElementById('visibleCarCount');
+            if (counterEl) {
+                counterEl.textContent = visibleCount;
+            }
+        }
+
+        // Hero Search Form Handler
+        function handleHeroSearch(e) {
+            e.preventDefault();
+            const keyword = document.getElementById('heroSearchKeyword').value.trim();
+            const type = document.getElementById('heroSearchType').value;
+            const budget = document.getElementById('heroSearchBudget').value;
+            const condition = document.getElementById('heroSearchCondition').value;
+
+            // Sync category tab if specific type selected
+            if (type !== 'all') {
+                currentActiveCategory = type;
+                const tabs = document.querySelectorAll('#categoryFilterBar .filter-tab');
+                tabs.forEach(tab => {
+                    if (tab.getAttribute('data-category') === type) {
+                        tab.classList.add('active');
+                    } else {
+                        tab.classList.remove('active');
+                    }
+                });
+            } else {
+                currentActiveCategory = 'all';
+                const tabs = document.querySelectorAll('#categoryFilterBar .filter-tab');
+                tabs.forEach(tab => {
+                    if (tab.getAttribute('data-category') === 'all') tab.classList.add('active');
+                    else tab.classList.remove('active');
+                });
+            }
+
+            filterInventory(keyword, budget, condition);
+
+            // Smooth scroll down to inventory section
+            const invSection = document.getElementById('inventorySection');
+            if (invSection) {
+                invSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            showToast(`Filtered inventory for your preferences.`);
+        }
+
+        // Direct Category Filter
+        function filterByCategory(category) {
+            currentActiveCategory = category;
+            const tabs = document.querySelectorAll('#categoryFilterBar .filter-tab');
+            tabs.forEach(t => {
+                if (t.getAttribute('data-category') === category) t.classList.add('active');
+                else t.classList.remove('active');
+            });
+            filterInventory();
+            const invSection = document.getElementById('inventorySection');
+            if (invSection) invSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Sort Inventory Cards
+        function sortInventory() {
+            const grid = document.getElementById('inventoryGrid');
+            const cards = Array.from(grid.querySelectorAll('.car-box'));
+            const sortVal = document.getElementById('inventorySort').value;
+
+            cards.sort((a, b) => {
+                const priceA = parseFloat(a.getAttribute('data-price'));
+                const priceB = parseFloat(b.getAttribute('data-price'));
+                const yearA = parseInt(a.getAttribute('data-year'));
+                const yearB = parseInt(b.getAttribute('data-year'));
+                const mileageA = parseInt(a.getAttribute('data-mileage'));
+                const mileageB = parseInt(b.getAttribute('data-mileage'));
+
+                if (sortVal === 'price-asc') return priceA - priceB;
+                if (sortVal === 'price-desc') return priceB - priceA;
+                if (sortVal === 'year-desc') return yearB - yearA;
+                if (sortVal === 'mileage-asc') return mileageA - mileageB;
+                return 0;
+            });
+
+            cards.forEach(card => grid.appendChild(card));
+        }
+
+        // Loan Calculator Functions
+        function setLoanTerm(months, btnElement) {
+            currentLoanTermMonths = months;
+            document.querySelectorAll('.term-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+            document.getElementById('calcTermDisplay').textContent = `${months} Months (${(months/12).toFixed(1)} Yrs)`;
+            updateLoanCalculator();
+        }
+
+        function updateLoanCalculator() {
+            const price = parseFloat(document.getElementById('calcPriceSlider').value);
+            const downSlider = document.getElementById('calcDownSlider');
+            
+            // Limit down payment slider to max vehicle price
+            downSlider.max = price;
+            let down = parseFloat(downSlider.value);
+            if (down > price) {
+                down = price * 0.2;
+                downSlider.value = down;
+            }
+
+            const rate = parseFloat(document.getElementById('calcRateSlider').value);
+            const months = currentLoanTermMonths;
+
+            // Update UI Labels
+            document.getElementById('calcPriceDisplay').textContent = `$${price.toLocaleString()}`;
+            document.getElementById('calcDownDisplay').textContent = `$${down.toLocaleString()}`;
+            const downPercent = Math.round((down / price) * 100);
+            document.getElementById('calcDownPercent').textContent = `${downPercent}%`;
+            document.getElementById('calcRateDisplay').textContent = `${rate.toFixed(1)}%`;
+
+            // Loan Computation
+            const principal = Math.max(0, price - down);
+            let monthlyPayment = 0;
+            let totalInterest = 0;
+
+            if (principal > 0 && months > 0) {
+                const monthlyRate = (rate / 100) / 12;
+                monthlyPayment = (principal * (monthlyRate * Math.pow(1 + monthlyRate, months))) / 
+                                 (Math.pow(1 + monthlyRate, months) - 1);
+                const totalCost = (monthlyPayment * months);
+                totalInterest = totalCost - principal;
+            }
+
+            document.getElementById('calcMonthlyOutput').innerHTML = `$${Math.round(monthlyPayment).toLocaleString()} <span>/ mo</span>`;
+            document.getElementById('calcPrincipalOutput').textContent = `$${Math.round(principal).toLocaleString()}`;
+            document.getElementById('calcInterestOutput').textContent = `$${Math.round(totalInterest).toLocaleString()}`;
+            document.getElementById('calcTotalOutput').textContent = `$${Math.round(principal + totalInterest).toLocaleString()}`;
+        }
+
+        // Apply financing terms to purchase order form
+        function applyFinancingToForm() {
+            const price = document.getElementById('calcPriceSlider').value;
+            const down = document.getElementById('calcDownSlider').value;
+            const term = currentLoanTermMonths;
+            const monthly = document.getElementById('calcMonthlyOutput').textContent;
+
+            // Select finance payment method
+            selectPaymentMethod('finance');
+
+            const budgetInput = document.getElementById('targetBudget');
+            if (budgetInput) budgetInput.value = `Down: $${Number(down).toLocaleString()} | Est. ${monthly}`;
+
+            const commentInput = document.getElementById('buyerComments');
+            if (commentInput) {
+                commentInput.value = `Applying for financing pre-approval with estimated monthly payments of ${monthly} over ${term} months with $${Number(down).toLocaleString()} down payment.`;
+            }
+
+            const formSection = document.getElementById('buyFormSection');
+            if (formSection) formSection.scrollIntoView({ behavior: 'smooth' });
+
+            showToast("Financing estimate applied to order form!");
+        }
+
+        // Trade-In Valuation Calculator
+        function calculateTradeInValue() {
+            const make = document.getElementById('tradeMake').value.trim();
+            const year = parseInt(document.getElementById('tradeYear').value);
+            const mileage = parseInt(document.getElementById('tradeMileage').value) || 50000;
+            const condition = document.getElementById('tradeCondition').value;
+
+            if (!make) {
+                alert("Please enter the make and model of your vehicle to estimate valuation.");
+                return;
+            }
+
+            // Estimate computation
+            let baseVal = 25000;
+            const currentYear = 2026;
+            const age = Math.max(0, currentYear - year);
+            baseVal = baseVal - (age * 1800);
+
+            if (mileage > 100000) baseVal *= 0.85;
+            else if (mileage < 30000) baseVal *= 1.15;
+
+            if (condition === 'excellent') baseVal *= 1.12;
+            else if (condition === 'fair') baseVal *= 0.82;
+
+            const lowEst = Math.max(5000, Math.round(baseVal * 0.92));
+            const highEst = Math.max(7000, Math.round(baseVal * 1.08));
+
+            document.getElementById('tradeValueSpan').textContent = `$${lowEst.toLocaleString()} - $${highEst.toLocaleString()}`;
+            const resBox = document.getElementById('tradeInResult');
+            resBox.classList.add('show');
+
+            showToast(`Estimated valuation calculated for ${make}!`);
+        }
+
+        function applyTradeInToPurchase() {
+            const make = document.getElementById('tradeMake').value.trim() || 'Current Vehicle';
+            const val = document.getElementById('tradeValueSpan').textContent;
+
+            selectPaymentMethod('tradein');
+
+            const commentInput = document.getElementById('buyerComments');
+            if (commentInput) {
+                commentInput.value = `Trade-in vehicle: ${make} (Valuation estimated at ${val}). Looking to apply toward the selected vehicle.`;
+            }
+
+            const formSection = document.getElementById('buyFormSection');
+            if (formSection) formSection.scrollIntoView({ behavior: 'smooth' });
+
+            showToast("Trade-in details added to your reservation!");
+        }
+
+        // Selection when clicking "Buy / Reserve Now" on any card
+        function selectCarForPurchase(carName, price) {
+            const selectEl = document.getElementById('selectedVehicle');
+            if (selectEl) {
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].value.includes(carName) || carName.includes(selectEl.options[i].value)) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            // Update calculator with this car's price
+            const priceSlider = document.getElementById('calcPriceSlider');
+            if (priceSlider) {
+                priceSlider.value = price;
+                updateLoanCalculator();
+            }
+
+            // Scroll smoothly to form
+            const formSection = document.getElementById('buyFormSection');
+            if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth' });
+                selectEl.style.borderColor = 'var(--accent-gold)';
+                setTimeout(() => { selectEl.style.borderColor = ''; }, 2000);
+            }
+
+            showToast(`Selected "${carName}". Complete your reservation below!`);
+        }
+
+        function handleCarSelectChange() {
+            const selectEl = document.getElementById('selectedVehicle');
+            const selectedOpt = selectEl.options[selectEl.selectedIndex];
+            const price = parseFloat(selectedOpt.getAttribute('data-price')) || 80000;
+
+            const priceSlider = document.getElementById('calcPriceSlider');
+            if (priceSlider) {
+                priceSlider.value = price;
+                updateLoanCalculator();
+            }
+        }
+
+        // Payment Method Switcher
+        function selectPaymentMethod(type, element) {
+            const cards = document.querySelectorAll('.payment-method-card');
+            cards.forEach(c => c.classList.remove('active'));
+
+            if (element) {
+                element.classList.add('active');
+                element.querySelector('input').checked = true;
+            } else {
+                cards.forEach(c => {
+                    const inp = c.querySelector('input');
+                    if (type === 'cash' && inp.value.includes('Cash')) { c.classList.add('active'); inp.checked = true; }
+                    if (type === 'finance' && inp.value.includes('Financing')) { c.classList.add('active'); inp.checked = true; }
+                    if (type === 'tradein' && inp.value.includes('Trade')) { c.classList.add('active'); inp.checked = true; }
+                });
+            }
+        }
+
+        // Spec Modal Controller
+        function openCarSpecsModal(carKey) {
+            const data = vehicleSpecsDB[carKey];
+            if (!data) return;
+
+            document.getElementById('specModalImg').src = data.image;
+            document.getElementById('specModalTitle').textContent = data.title;
+            document.getElementById('specModalScore').textContent = `Inspection: ${data.score}`;
+            document.getElementById('specModalDesc').textContent = data.desc;
+
+            // Populate Specs Table
+            const table = document.getElementById('specModalTable');
+            table.innerHTML = '';
+            data.specs.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td>${item.label}</td><td>${item.val}</td>`;
+                table.appendChild(tr);
+            });
+
+            // Populate Features List
+            const featList = document.getElementById('specModalFeatures');
+            featList.innerHTML = '';
+            data.features.forEach(feat => {
+                const li = document.createElement('li');
+                li.textContent = feat;
+                featList.appendChild(li);
+            });
+
+            // Set Buy button action
+            const buyBtn = document.getElementById('specModalBuyBtn');
+            buyBtn.onclick = () => {
+                closeModal('specModal');
+                selectCarForPurchase(data.title, data.price);
+            };
+
+            openModal('specModal');
+        }
+
+        // Test Drive Modal Controller
+        function openTestDriveModal(carName) {
+            document.getElementById('tdCar').value = carName;
+            openModal('testDriveModal');
+        }
+
+        function handleTestDriveSubmit(e) {
+            e.preventDefault();
+            const car = document.getElementById('tdCar').value;
+            const name = document.getElementById('tdName').value;
+            const phone = document.getElementById('tdPhone').value;
+            const date = document.getElementById('tdDate').value;
+            const time = document.getElementById('tdTime').value;
+
+            closeModal('testDriveModal');
+            showToast(`Test drive scheduled for ${car} on ${date} (${time})! Our concierge will call ${phone}.`);
+            e.target.reset();
+        }
+
+        // Purchase Order Form Submission
+        function handlePurchaseSubmit(e) {
+            e.preventDefault();
+            const vehicle = document.getElementById('selectedVehicle').value;
+            const name = document.getElementById('buyerName').value;
+            const email = document.getElementById('buyerEmail').value;
+            const phone = document.getElementById('buyerPhone').value;
+            
+            let paymentMethod = 'Cash / Full Wire';
+            const checkedRadio = document.querySelector('input[name="paymentMethod"]:checked');
+            if (checkedRadio) paymentMethod = checkedRadio.value;
+
+            // Generate clean reference code
+            const randomCode = 'PC-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+
+            document.getElementById('confRefCode').textContent = randomCode;
+            document.getElementById('confVehicle').textContent = vehicle;
+            document.getElementById('confName').textContent = name;
+            document.getElementById('confMethod').textContent = paymentMethod;
+
+            openModal('orderConfirmModal');
+            e.target.reset();
+        }
+
+        // Modal Helpers
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('open');
+                    overlay.setAttribute('aria-hidden', 'true');
+                }
+            });
+        });
+
+        // Toast Notification Trigger
+        function showToast(message) {
+            const toast = document.getElementById('toastNotice');
+            const msgEl = document.getElementById('toastMsg');
+            if (toast && msgEl) {
+                msgEl.textContent = message;
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 4000);
+            }
+        }
+    </script>
+</body>
+</html>
